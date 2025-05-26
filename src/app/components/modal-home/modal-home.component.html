@@ -1,0 +1,20 @@
+<div *ngIf="joke" class="modal-container">
+    <div class="modal-content">
+        <button class="close-btn" (click)="closeModal()" aria-label="Fechar modal">&times;</button>
+
+        <img src="https://media1.tenor.com/m/vNEk_vhyUsUAAAAC/chuck-norris-walker-texas-ranger.gif"
+            alt="Chuck Norris GIF" class="gif-chuck" />
+
+        <h2>Chuck Norris pensou em algo...</h2>
+
+        <p class="joke-text"> "{{ joke.value }}"</p>
+
+        <ul>
+            <li><strong>Criado em:</strong> {{ joke.created_at }}</li>
+            <li><strong>Atualizado em:</strong> {{ joke.updated_at }}</li>
+            <li><strong>URL:</strong> <a [href]="joke.url" target="_blank" rel="noopener noreferrer">{{ joke.url }}</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
